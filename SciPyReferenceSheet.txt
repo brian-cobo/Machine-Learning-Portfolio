@@ -1,0 +1,26 @@
+1 Sample T Test
+    When you perform a t-test, you're usually trying to find evidence of a significant difference between population means (2-sample t) or between the population mean and a hypothesized value (1-sample t). The t-value measures the size of the difference relative to the variation in your sample data.
+
+    from scipy.stats import ttest_1samp
+    tstat, pval = ttest_1samp(example_distribution, expected_mean)
+
+2 Sample T Test 
+    from scipy.stats import ttest_ind
+    tstat, pval = ttest_ind(distribution1, distribution2)
+
+ANOVA Test (Analysis of Variance)
+    Compares the means between the groups you are interested in and determines whether any of those means are statistically significantly different from each other.
+
+    from scipy.stats import f_oneway
+    fstat, pval = f_oneway(dataset1, dataset2, dataset3)
+
+Tukey Range Test
+    Determines which means amongst a set of means differ from the rest.
+
+    from statsmodels.stats.multicomp import pairwise_tukeyhsd
+    tukey_results = pairwise_tukeyhsd(dataset1, dataset2, significance_level)
+
+Binomial Test
+    A Binomial Test compares a categorical dataset to some expectation. The null hypothesis would be that there is no difference between the observed behavior and the expected behavior. If we get a p-value of less than 0.05, we can reject that hypothesis and determine that there is a difference between the observation and expectation.
+
+    from scipy.stats import binom_test

@@ -1,0 +1,9 @@
+from matplotlib import pyplot as pyplot
+
+Create histogram
+    plt.hist(value)
+    plt.hist(value, range(20,50)) # range for all values
+    plt.hist(value, bins = 5) # bins are number of columns
+
+Draw and show graph
+    plt.show()

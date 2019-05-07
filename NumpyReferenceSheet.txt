@@ -43,19 +43,13 @@ Find Percentile
 Find Standard Deviation
     np.std(values)
 
+Randomly Generate Numbers that fit normal distribution
+    np.random.normal(mean, std, sizeOfSet)
 
+Randomly Generate Binomial distribution
+Probability of successes
+    np.random.binomial(numberOfTrials, Probability of Success, Size)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Find Ratio of Variances Between 2 Datasets
+    ratio = np.std(dataset1) / np.std(dataset2)
 
