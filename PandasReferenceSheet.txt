@@ -1,0 +1,43 @@
+Create a dataframe
+    import pandas as pd
+    pd.dataframe()
+
+Naming Columns in dataframe
+    pd.dataframe([data], columns = [])
+
+Converting CSV file into dataframe
+    pd.read_csv('text.csv')
+
+Converting dataframe to CSV file
+    df.to_csv('text.csv')
+
+Print first few rows of dataframe
+    df.head()
+    df.head(n)
+
+print info statistics for each column
+    df.info()
+
+selecting columns in dataframe
+    var = df.columnName
+    var = df['columnName']
+    var = df[[column2, column2]]
+    var = df.iloc[row1:row2, col1:col2]
+    var = df.iloc[row]
+    var = df.iloc[:, column]
+    
+Selecting columns with logic
+    df[df.columnName == x]
+    df[df.columnName > x]
+    df[df.columnName < x]
+    df[df.columnName != x]
+    df[ (df.columnName < x) | (df.columnName > x)]
+
+selecting rows with particular values in common
+    df[df.var.isin([value1, value2])]
+
+Resetting indexes for data
+    df.reset_index(drop = True)
+        drop replaces old index with new
+
+

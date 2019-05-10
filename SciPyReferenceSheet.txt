@@ -24,3 +24,10 @@ Binomial Test
     A Binomial Test compares a categorical dataset to some expectation. The null hypothesis would be that there is no difference between the observed behavior and the expected behavior. If we get a p-value of less than 0.05, we can reject that hypothesis and determine that there is a difference between the observation and expectation.
 
     from scipy.stats import binom_test
+    pval = binom_test(observed_successes, numberOfTrials, probabilityOfSuccess)
+
+Chi Square Test
+    The Chi-square test is intended to test how likely it is that an observed distribution is due to chance. It is also called a "goodness of fit" statistic, because it measures how well the observed distribution of data fits with the distribution that is expected if the variables are independent.
+
+    from scipy.stats import chi2_contingency
+    chi2, pval, dof, expected = chi2_contingency(X)
