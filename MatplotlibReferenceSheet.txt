@@ -5,5 +5,86 @@ Create histogram
     plt.hist(value, range(20,50)) # range for all values
     plt.hist(value, bins = 5) # bins are number of columns
 
+Plot points into graph
+    xvalues = [values]
+    yvalues = [values]
+    plt.plot(xvalues, yvalues)
+
 Draw and show graph
     plt.show()
+
+Change the color of a line by name or by hex code
+    plt.plot(xvalues, yvalues, color = 'green')
+    plt.plot(xvalues, yvalues, color = '#AAAAAA')
+    
+Change linestyle of line
+    plt.plot(xvalues, yvalues, linestyle = '(some character)')
+
+Change marker for points
+    plt.plot(xvalues, yvalues, marker = '(some character)')
+
+Change axis points on graph
+    plt.axis([xStart, xEnd, yStart, yEnd])
+
+Set axis labels and title
+    plt.xlabel(label)
+    plt.ylabel(label)
+    plt.title(label)
+
+Create subplot
+    plt.subplot(numRows, numCol, indexOfsubplot)
+        Index starts at 1
+
+Adjust subplot space
+    Is called after plotted
+    -left: left side margin. default = 0.125
+    -right: right side margin. default = 0.9
+    -bottom: bottom margin. default = 0.1
+    -top: top margin. default = 0.9
+    -wspace: horizontal space between plots. default 0.2
+    -hspace: vertical space between plots. default = 0.2
+
+    plt.subplots_adjust(margin = size)
+
+Create legend for graph
+    loc changes location of legend on graph
+    Or put in in the plot command with label = ''
+    plt.legend([list of labels] loc = 'number 1-10')
+    
+    plt.plot(xvalues, yvalues, label = 'labelName')
+    plt.legend()
+
+Modify Ticks
+    ax modifies axes of a specific subplot
+    ax = plt.subplot(numRows, numCol, indexOfsubplot)
+    ax.set_xticks([ticks for graph])
+    ax.set_yticks([ticks for graph])
+    ax.set_xticklabels([ticks for graph])
+    ax.set_yticklabels([ticks for graph])
+
+Clearing out plots
+    plt.close('all')
+
+Creating new figure
+    plt.figure(figsize = (width in, height in))
+
+Saving figure to specific format
+    possible formats include:
+    -png
+    -svg
+    -pdf
+     plt.figure(figsize = (width in, height in))
+     plt.plot(x, y)
+     plt.savefig('filename.filetype')
+
+
+
+
+
+
+
+
+
+
+
+
