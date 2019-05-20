@@ -1,0 +1,17 @@
+Linear Regression
+    Goal: Find the slope and intercept pair that minimizes loss on average        across all data
+    Examples:
+        Predicting cost of a house given market price vs. square footage
+        Predicting Tax rate of a contry v its GDP
+    Equation: y = mx + b
+    Calculate Error: Sum of (y-ypredicted)^2
+    To use: 
+        from sklearn.linear_model import LinearRegression
+        variable = LinearRegression()
+        variable.fit(X, y)
+        predicted = variable.predict(X)
+
+
+Vocab to know:
+    Gradient Descent: Moving towards the point of the slope that decreases                    loss the most
+    Convergence: When the loss stops changing, or slows down tremendously

@@ -118,6 +118,9 @@ Adding percentage to pie chart
     example
         plt.pie(data, autopct = '%0.2f%%)
 
+Draw a scatter plot
+    plt.scatter(x, y)
+
 
 
 
