@@ -2,9 +2,5 @@
 
 Welcome to my portfolio, I'll be adding different projects as I work on them, learn new things, and practice new skills.
 
-Contents
-
-  Machine Learning Projects
-    
-  Linear Regression
-  World War 2 Linear Regression to predict max temperature given min temperature
+At the moment i've completed:
+  A linear regression model that predicts the max temperature given the min and mean temperature in a dataset from WW2.
