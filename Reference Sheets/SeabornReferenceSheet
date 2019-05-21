@@ -1,0 +1,24 @@
+import seaborn (as sns)
+Seaborn uses pandas to plot things
+
+Create a bar graph
+    Can add Confidence Intervals (CI) and use Standard Dev too (sd)
+    Estimator is used to plot aggregates
+        np.median
+        np.median
+        len and so on
+    hue adds a nested categorical variable to plot on graph
+
+    sns.barplot(data = df, x = "column", y = "column", ci = "sd", estimator = aggregrate, hue = column)
+
+    plt.show()
+
+Create KDE plot
+    Shows distribution of graph
+    sns.kdeplot(data = df, shade = True)
+
+Create Box Plots
+    sns.boxplot(data = df, x = column, y = column)
+
+Create Violin Plots
+    sns.violinplot(data = df, x = column, y = column)

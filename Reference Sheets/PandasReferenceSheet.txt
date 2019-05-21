@@ -1,0 +1,115 @@
+Create a dataframe
+    import pandas as pd
+    pd.dataframe()
+
+Naming Columns in dataframe
+    pd.dataframe([data], columns = [])
+
+Converting CSV file into dataframe
+    pd.read_csv('text.csv')
+
+Converting dataframe to CSV file
+    df.to_csv('text.csv')
+
+Print first few rows of dataframe
+    df.head()
+    df.head(n)
+
+print info statistics for each column
+    df.info()
+
+selecting columns in dataframe
+    var = df.columnName
+    var = df['columnName']
+    var = df[[column2, column2]]
+    var = df.iloc[row1:row2, col1:col2]
+    var = df.iloc[row]
+    var = df.iloc[:, column]
+    
+Selecting columns with logic
+    df[df.columnName == x]
+    df[df.columnName > x]
+    df[df.columnName < x]
+    df[df.columnName != x]
+    df[ (df.columnName < x) | (df.columnName > x)]
+
+selecting rows with particular values in common
+    df[df.var.isin([value1, value2])]
+
+Resetting indexes for data
+    df.reset_index(drop = True)
+        drop replaces old index with new
+
+Adding columns to table
+    df['columnName'] = [values]
+
+Adding column to table with same value for every row
+    df['columnName'] = value
+
+Adding column with aggregate functiokn
+    df['columnName'] = otherColumnName * value
+
+Apply a function to every value in a column
+    df['columnName'] = df['columnName'].apply(operation)
+    df['columnName'] = df['columnName'].apply(lambda x: x.(function))
+
+Renaming columns in dataframe
+    df.columns = [newColumnNames]
+    df.rename(columns={'oldColumnName':'newColumnName'}, inplace = True)
+
+Aggregates
+    df.columnName.command()
+    -max
+    -min
+    -count
+    -nunique (number of unique items)
+    -unique (list of unique items)
+
+Performing aggregate by group
+    df.groupby('columnName').columnName.aggregate()
+    df.groupby([list of columnNames]).columnName.aggregate()
+
+Turning groupby result into a new datagrame
+    df.groupby('columnName').columnName.aggregate().reset_index()
+
+Creating pivot tables
+    df.pivot(columns='ColumnToPivot',
+         index='ColumnToBeRows',
+         values='ColumnToBeValues').reset_index()
+
+Merging tables
+    new_df = pd.merge(table1, table2)
+    new_df = table.merge(table2)
+    new_df = table1.merge(table2).merge(table3)
+    
+    new_df = pd.merge(
+	table1, table2,
+	left_on = 'column,
+	right_on = 'column',
+	suffixes = ['_orders', '_products']
+)
+
+Inner/Outer/Left/Right Merges
+    Inner is merging all rows with matching info, could lose info
+    Inner is done automatically
+    Outer is merging all rows but include everything
+        mising values are filled in with None
+    Left includes all rows from first table, but only rows from second 
+        table that match the first table
+    Right includes all rows from second table, but only rows from first 
+        table that match the second table
+        
+    pd.merge(table1, table2, how = 'outer')
+    pd.merge(table1, table2, how = 'left')
+    pd.merge(table1, table2, how = 'right')
+
+Concatenating dataframes
+    pd.concat([df1, df2])
+
+Detecting Null Values in dataframe
+    df.isna()
+    df.notna()
+
+Replace Na values in df
+    df.fillna(value/mean/aggregate/whatever, inplace = True)
+    

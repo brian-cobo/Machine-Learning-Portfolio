@@ -1,0 +1,25 @@
+Make URL requests from website
+    import requests
+    webpage = requests.get(url)
+    print(webpage.content)
+
+Use BeautifulSoup as a Parser
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup("name.html", "html.parser") #parses html code
+
+Attributes that can be printed
+    soup.(tag).(attribute)
+    soup.div.string
+    soup.p.name
+    soup.body.attrs
+    soup.parents
+    soup.children
+
+Find all occurences of a tag
+    soup.find_all(tag/regex)
+
+Selecting specific elements
+    soup.select()
+
+Getting text from element
+    soup.get_text()

@@ -1,0 +1,55 @@
+Creating a numpy Array
+    my_list = [1, 2, 3, 4, 5, 6]
+    my_array = np.array(my_list)
+
+Convert csv file to numpy array
+    csv_array = np.genfromtxt('sample.csv', delimiter=',')
+
+Operations can be carried out through arrays
+    a = np.array(l)
+    a_plus_3 = a + 3
+    #this adds 3 to every element in that array
+
+Two dimensional Array
+    coin_toss_= np.array([
+        [1, 0, 0, 1, 0],
+        [0, 0, 1, 1, 1]
+        ])
+
+Logical Operators in arrays
+    & and | or
+    a[a > 5]
+    >> array([10, 9, 8, 9, 7])
+    returns all values greater than 5
+    
+    a[(a > 5) | (a < 2)]
+    >>array([10, 9, 8, 9, 7])
+    returns values greater than 5 or less than 2
+
+Find Average
+    np.mean(values)
+    np.mean(values, axis = 1) find mean of each row
+    np.mean(values, axis = 0) find mean of each column
+
+Sort values/arrays
+    np.sort(value)
+
+Find Median
+    np.median(values)
+
+Find Percentile
+    np.percentile(values, percentile)
+
+Find Standard Deviation
+    np.std(values)
+
+Randomly Generate Numbers that fit normal distribution
+    np.random.normal(mean, std, sizeOfSet)
+
+Randomly Generate Binomial distribution
+Probability of successes
+    np.random.binomial(numberOfTrials, Probability of Success, Size)
+
+Find Ratio of Variances Between 2 Datasets
+    ratio = np.std(dataset1) / np.std(dataset2)
+
