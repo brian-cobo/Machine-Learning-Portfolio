@@ -21,6 +21,7 @@ Multiple Linear Regression
         y = b + m1x1 + m2x2 + ... + mnxn
     Calculate Error: (Residual Analysis, difference between acutal y and                        predicted y) Produces R^2 which tells you how much                      variation there is in the y variable. The closer to                     1 the better.
                         LinearRegression.score(x_train, y_train)
+                        LinearRegression.score(x_test, y_test)
     To Use:
         Split and test data first
         from sklearn.linear_model import LinearRegression
@@ -31,7 +32,8 @@ Multiple Linear Regression
         Can print out coefficient of slope, and intercept. Can be used to see which columns affect the predict value most.
         print(variable.coef_)
         print(variable.intercept_)
-​	 
+        Get accuracy of model
+        variable.score(x_test, y_test)
 
 Splitting testing and training data
     from sklearn.model_selection import train_test_split

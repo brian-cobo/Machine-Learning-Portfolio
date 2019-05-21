@@ -105,4 +105,11 @@ Inner/Outer/Left/Right Merges
 
 Concatenating dataframes
     pd.concat([df1, df2])
+
+Detecting Null Values in dataframe
+    df.isna()
+    df.notna()
+
+Replace Na values in df
+    df.fillna(value/mean/aggregate/whatever, inplace = True)
     
