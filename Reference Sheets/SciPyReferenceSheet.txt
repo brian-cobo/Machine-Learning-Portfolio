@@ -31,3 +31,11 @@ Chi Square Test
 
     from scipy.stats import chi2_contingency
     chi2, pval, dof, expected = chi2_contingency(X)
+
+Distances
+    Euclidean Distance
+        .euclidean()
+    Manhattan Distance
+        .cityblock()
+    Hamming Distance
+        .hamming()

@@ -35,10 +35,55 @@ Multiple Linear Regression
         Get accuracy of model
         variable.score(x_test, y_test)
 
+K Nearest Neighbors
+    Goal:
+        Normalize the data
+        find k nearest Neighbors
+        classify the new point based on those neighbors
+    Examples:
+        Predict whether an email is spam or not
+        Predict whether it will rain or not
+        Predict whether a user is a power user or a casual user
+    To Use:
+        from sklearn.neighbors import KNeighborsClassifier
+        classifier = KNeighborsClassifier(n_neighbors = 3)
+        training_points = [
+        [0.5, 0.2, 0.1],
+        [0.9, 0.7, 0.3],
+        [0.4, 0.5, 0.7]
+        ]
+
+        training_labels = [0, 1, 1]
+        classifier.fit(training_points, training_labels)
+
+        unknown_points = [
+        [0.2, 0.1, 0.7],
+        [0.4, 0.7, 0.6],
+        [0.5, 0.8, 0.1]
+        ]
+
+        guesses = classifier.predict(unknown_points)
+
 Splitting testing and training data
     from sklearn.model_selection import train_test_split
     x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.8, test_size=0.2)
 
+
 Vocab to know:
-    Gradient Descent: Moving towards the point of the slope that decreases                    loss the most
-    Convergence: When the loss stops changing, or slows down tremendously
+    Regression:
+        Regression is used to predict outputs that are continuous. The outputs are quantities that can be flexibly determined based on the inputs of the model rather than being confined to a set of possible labels.
+    
+    Classification:
+        Classification is used to predict a discrete label. The outputs fall under a finite set of possible outcomes. Many situations have only two possible outcomes. This is called binary classification (True/False, 0 or 1)
+
+    Gradient Descent: 
+        Moving towards the point of the slope that decreases                    loss the most
+    Convergence: 
+        When the loss stops changing, or slows down tremendously
+    
+    Normalization Techniques
+        (value-minimum)/(maximum-minimum)
+        Min-max normalization: 
+            Guarantees all features will have the exact same scale but does not handle outliers well.
+        Z-score normalization: 
+            Handles outliers, but does not produce normalized data with the exact same scale.
