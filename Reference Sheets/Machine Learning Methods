@@ -64,9 +64,63 @@ K Nearest Neighbors
 
         guesses = classifier.predict(unknown_points)
 
+Naive Bayes Theorem
+    Goal: The probability theory that relates conditional probabilities. If A and B denote two events, P(A. | B) denotes the conditional probability of A occurring, given that B occurs.
+    Examples:
+        Breaking German Enigma
+        Calculating probability of an event, given a probability of another
+    Formula: P(A|B) = P(B|A) * P(A) / P(B)
+    To Use:
+        from sklearn.feature_extraction.text import CountVectorizer
+        from sklearn.naive_bayes import MultinomialNB
+
+        vectorizer = CountVectorizer()
+        vectorizer.fit(["Training review one", "Second review"])
+        counts = vectorizer.transform(["one review two review"])
+        print(vectorizer.vocabulary_)
+        print(review_counts.toarray())
+        classifier = MultinomialNB()
+        classifier.fit(training_counts, training_labels)
+        print(classifier.predict(review_counts))
+        print(classifier.predict_proba(review_counts))
+
+Logistic Regression
+    Goal: 
+        A mathematical model used in statistics to estimate (guess) the probability of an event occurring having been given some previous data
+    Examples: 
+        -Disease survival —Will a patient, 5 years after treatment for a disease, still be alive?
+        -Customer conversion —Will a customer arriving on a sign-up page enroll in a service?
+    Formula: z=b0 + b1*x1 +⋯+ bn*xn
+    To Use: 
+        from sklearn.linear_model import LinearRegression
+        model = LinearRegression()
+        model.fit(hours_studied,passed_exam)
+        probability = model.predict(sample_x).ravel()
+
+Decision Trees 
+    Goal:
+    Examples:
+    Formula:
+    To Use:
+        from sklearn.tree import DecisionTreeClassifier
+        classifier = DecisionTreeClassifier()
+        classifier.fit(training_points, training_labels)
+        print(classifier.score(testing_points, testing_labels))
+
+        from sklearn.ensemble import RandomForestClassifier
+
+        classifier = RandomForestClassifier(n_estimators = 2000, random_state = 0)
+        classifier.fit(training_points, training_labels)
+        print(classifier.score(testing_points, testing_labels))
+        
+
 Splitting testing and training data
     from sklearn.model_selection import train_test_split
     x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.8, test_size=0.2)
+
+def sigmoid(z):
+    denominator = 1 + np.exp(-z)
+    return 1/denominator
 
 
 Vocab to know:
@@ -87,3 +141,9 @@ Vocab to know:
             Guarantees all features will have the exact same scale but does not handle outliers well.
         Z-score normalization: 
             Handles outliers, but does not produce normalized data with the exact same scale.
+    Independent Variable:
+        If two events are independent, then the occurrence of one event does not affect the probability of the other event
+    Dependent Variable:
+        If two events are dependent, then when one event occurs, the probability of the other event occurring changes in a predictable way.
+    Conditional Probability:
+        The probability that two events happen. Easiest to calulate when two events are independent
