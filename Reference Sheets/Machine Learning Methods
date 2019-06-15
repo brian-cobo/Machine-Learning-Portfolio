@@ -112,6 +112,13 @@ Decision Trees
         classifier = RandomForestClassifier(n_estimators = 2000, random_state = 0)
         classifier.fit(training_points, training_labels)
         print(classifier.score(testing_points, testing_labels))
+
+K Means Clustering
+    To Use:
+        from sklearn.cluster import KMeans
+        model = KMeans(n_clusters = k)
+        model.fit(X)
+        model.predict(X)
         
 
 Splitting testing and training data
